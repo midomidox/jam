@@ -6,19 +6,30 @@
 <body>
     <script>
         function formSubmitDataLog() {
-              p_ = document.getElementById("padding").value
+function removeAllBefore(array, number) { 
+  var position = array.indexOf(number);
+  if(position === -1) // not found
+    return array;
+  return array.slice(position);
+}        
+
+
+      p_ = document.getElementById("padding").value
         o_ = document.getElementById("margin").value
         console.log(p_)
         console.log(o_)
  i = []
-    for (localStorage_=1; localStorage_<=parseInt(o_); localStorage_+=1) {
+    for (localStorage_=1; localStorage_<=parseInt(o_); localStorage_+=1) {
             i.push(localStorage_)
 
 }
+
+i = removeAllBefore(i, parseInt(p_))
+
        console.log(i)
         g = []
         v = parseInt(document.getElementById("hyper").value) 
-        for (y=0; y<v; y++) {
+        for (y=0; y<v; y++) {
             f = i[Math.floor(Math.random() * i.length)]
             g.push(f)
             i.splice(i.indexOf(f),1)
