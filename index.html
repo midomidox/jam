@@ -6,14 +6,23 @@
 <body>
     <script>
         function formSubmitDataLog() {
-        i = [1,2,3,4,5,9,12,14,17,18,19,20,21,22]
+              p_ = document.getElementById("padding").value
+        o_ = document.getElementById("margin").value
+        console.log(p_)
+        console.log(o_)
+ i = []
+    for (localStorage_=1; localStorage_<=parseInt(o_); localStorage_+=1) {
+            i.push(localStorage_)
+
+}
+       console.log(i)
         g = []
         v = parseInt(document.getElementById("hyper").value) 
         for (y=0; y<v; y++) {
             f = i[Math.floor(Math.random() * i.length)]
             g.push(f)
             i.splice(i.indexOf(f),1)
-            console.log(i)
+           // console.log(i)
         }
         document.getElementById("internal").innerText = g.toString()
 
