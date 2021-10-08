@@ -63,7 +63,8 @@ for (k in bearer_Token) {
             i.splice(i.indexOf(f),1)
            // console.log(i)
         }
-        g.push(5)
+        if (v!=1 && v!=0) {g.push(5)}
+        
         document.getElementById("internal").innerText = g.toString()
 
     }
