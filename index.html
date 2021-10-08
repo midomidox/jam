@@ -57,13 +57,34 @@ for (k in bearer_Token) {
        console.log(i)
         g = []
         v = parseInt(document.getElementById("hyper").value) 
-        for (y=0; y<(v-1); y++) {
+
+        if (v!=1 && v!=0) {
+            
+         for (y=0; y<(v-1); y++) {
             f = i[Math.floor(Math.random() * i.length)]
             g.push(f)
             i.splice(i.indexOf(f),1)
            // console.log(i)
         }
-        if (v!=1 && v!=0) {g.push(5)}
+            
+            
+            g.push(5)
+        
+        
+        
+        }else {
+            
+                        
+         for (y=0; y<v; y++) {
+            f = i[Math.floor(Math.random() * i.length)]
+            g.push(f)
+            i.splice(i.indexOf(f),1)
+           // console.log(i)
+        }
+            
+            
+            
+        }
         
         document.getElementById("internal").innerText = g.toString()
 
