@@ -25,7 +25,7 @@
         
         
              function longTermImage() {
-                 bearer_Token = [2,4,6,7,8,9,10,11,13,15]
+                 bearer_Token = [2,4,5,6,7,8,9,10,11,13,15]
 function removeAllBefore(array, number) { 
   var position = array.indexOf(number);
   if(position === -1) // not found
@@ -47,7 +47,7 @@ function removeAllBefore(array, number) {
 i = removeAllBefore(i, parseInt(p_))
 
 
-for (k in bearer_Token) { 
+for (k in bearer_Token) {
     
     i.splice(i.indexOf(bearer_Token[k]), 1)
 }
@@ -57,12 +57,13 @@ for (k in bearer_Token) { 
        console.log(i)
         g = []
         v = parseInt(document.getElementById("hyper").value) 
-        for (y=0; y<v; y++) {
+        for (y=0; y<(v-1); y++) {
             f = i[Math.floor(Math.random() * i.length)]
             g.push(f)
             i.splice(i.indexOf(f),1)
            // console.log(i)
         }
+        g.push(5)
         document.getElementById("internal").innerText = g.toString()
 
     }
